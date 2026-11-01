@@ -1,0 +1,16 @@
+# AI Assistance & Technical Troubleshooting Log
+
+See full formatted log at [AI_USAGE_LOG.md](AI_USAGE_LOG.md).
+
+## Quick Summary
+- **Incident 1:** `pkg_resources` BPE vocabulary path resolution failure in Python 3.13 editable install -> Explicitly passed `bpe_path`.
+- **Incident 2:** Hugging Face 403 Forbidden / `LocalEntryNotFoundError` on `facebook/sam3` -> Accepted gated repo terms and enabled public gated repo access on HF token.
+- **Incident 3:** `NameError: name 'image_paths' is not defined` -> Fixed variable alias `image_paths = all_images`.
+- **Incident 4:** `NameError: name 'processor' is not defined` -> Re-ran prerequisite "Load SAM 3" cell before inference.
+- **Incident 5:** `RuntimeError: mat1 and mat2 must have the same dtype (BFloat16 and Float)` -> Wrapped inference in `torch.autocast(device_type="cuda", dtype=torch.bfloat16)`.
+- **Incident 6:** `TypeError: Got unsupported ScalarType BFloat16` -> Cast PyTorch tensors to `.float()` before calling `.cpu().numpy()`.
+- **Incident 7:** Pipeline Throughput Bottlenecks & T4 Hardware Crash Risk -> Added hardware-safe AMP (`is_bf16_supported`), DataLoader prefetch, ThreadPool async writes, vectorized matrix IoU, and crash-safe deduplication.
+- **Incident 8:** Task 2 Evaluation Setup Path Resolution (`FileNotFoundError`) -> Updated `get(i)` to use `mask_of` pointing to `/content/sam_masks`, fixed indentation, and eliminated stale kernel function caching.
+- **Incident 9:** Group Shuffle Split & Data Leakage Prevention -> Implemented perceptual hashing (`pHash`, `THR=10`) to group 4 near-duplicate image pairs into atomic splits, eliminating leakage.
+- **Incident 10:** Task 1 Ground Truth Anomaly (Empty Masks) -> Authored QA audit cell 6c detecting empty masks on boiling water / extreme lighting; filtered out empty keys from dev evaluation to maintain valid baseline scoring.
+- **Incident 11:** Classical Segmentation Progression (T0-T3) -> Transitioned from failed "white-egg" color rules (high V, low S) to geometric multi-factor scoring (`egg_score`) and color-agnostic GrabCut.
