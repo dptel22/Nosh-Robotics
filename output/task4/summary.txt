@@ -1,0 +1,26 @@
+============================================================
+TASK 4 TRACKING SUMMARY REPORT
+============================================================
+Input Video: C:\Users\dhruv\PycharmProjects\Nosh-Robotics\video\Raw-and-Boiled-SnapYT.App.mp4
+Resolution: 1280 x 720 | FPS: 24.0 | Total Frames: 1440
+Camera Cuts Detected: 14 (frames: [210, 218, 219, 220, 221, 1001, 1002, 1003, 1004, 1005, 1006, 1008, 1009, 1010])
+Total Unique Track IDs Assigned: 13
+------------------------------------------------------------
+TRACK ID LIFECYCLES:
+  Egg ID 01: first seen  9.29s, last seen 36.92s (563 frames matched)
+  Egg ID 02: first seen  9.29s, last seen 30.42s (507 frames matched)
+  Egg ID 03: first seen 21.04s, last seen 21.17s (3 frames matched)
+  Egg ID 04: first seen 22.79s, last seen 24.17s (19 frames matched)
+  Egg ID 05: first seen 23.25s, last seen 27.04s (92 frames matched)
+  Egg ID 06: first seen 26.62s, last seen 26.88s (5 frames matched)
+  Egg ID 07: first seen 28.42s, last seen 28.54s (4 frames matched)
+  Egg ID 08: first seen 31.21s, last seen 41.67s (252 frames matched)
+  Egg ID 09: first seen 31.75s, last seen 35.62s (19 frames matched)
+  Egg ID 10: first seen 33.79s, last seen 41.58s (188 frames matched)
+  Egg ID 11: first seen 35.62s, last seen 40.46s (22 frames matched)
+  Egg ID 12: first seen 36.42s, last seen 40.83s (81 frames matched)
+  Egg ID 13: first seen 36.75s, last seen 41.62s (109 frames matched)
+------------------------------------------------------------
+POSSIBLE ID SWITCHES (SUSPECTS ONLY - CHECK BY EYE): 1
+  Suspect Switch: ID 2 lost -> ID 10 born within 8 frames (189.4px apart)
+============================================================

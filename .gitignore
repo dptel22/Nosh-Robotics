@@ -168,3 +168,6 @@ data
 
 !/CV Intern Task Wellfound.pdf
 /egg-seg/
+
+# Video files (Task 4 deliverables hosted on Google Drive)
+*.mp4

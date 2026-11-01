@@ -1,0 +1,19 @@
+{
+ "denoise": "gauss",
+ "mode": "otsu_gray",
+ "s_max": 65,
+ "v_min": 150,
+ "l_min": 140,
+ "ab_tol": 22,
+ "skin": false,
+ "morph": false,
+ "k_open": 5,
+ "k_close": 15,
+ "select": "largest",
+ "min_area": 0.005,
+ "max_area": 0.98,
+ "min_solid": 0.9,
+ "refine": null,
+ "gc_margin": 0.08,
+ "gc_iters": 4
+}

@@ -1,0 +1,32 @@
+{
+  "config_path": "C:\\Users\\dhruv\\PycharmProjects\\Nosh-Robotics\\output\\final_config.json",
+  "constants": {
+    "VIDEO_OVERRIDES": {
+      "mode": "hsv",
+      "s_max": 70,
+      "v_min": 170,
+      "morph": true,
+      "select": "shape",
+      "refine": null,
+      "min_area": 0.01,
+      "max_area": 0.5,
+      "min_solid": 0.0
+    },
+    "ROI_TOP": 0.25,
+    "AREA_RANGE": [
+      0.01,
+      0.15
+    ],
+    "MIN_ELLIPSE_FIT": 0.85,
+    "OPENING_SIZES": [
+      11,
+      21,
+      31
+    ],
+    "MAX_DIST_FRACTION": 0.12,
+    "MIN_HITS": 3,
+    "MAX_MISSED_SECONDS": 3.0,
+    "CUT_THRESHOLD": 0.6,
+    "TRAIL_LENGTH": 40
+  }
+}

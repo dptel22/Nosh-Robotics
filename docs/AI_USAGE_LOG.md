@@ -269,3 +269,10 @@ When discussing these issues during technical evaluation:
 6. **Geometric Shape Priors vs. Greedy Blob Selection:**
    * Greedy heuristics like `largest_blob` fail in robotic kitchen environments where background structures (dishes, pans, countertops) are larger and brighter than the target egg.
    * Coupling convexity ($\text{Area} / \text{ConvexHull}$), second-order central moments ($\text{fitEllipse}$), and spatial camera-centering priors produces a robust multi-attribute decision score that reliably isolates the object of interest.
+
+---
+
+### Incident 12 / Task 4: Video Tracking Pipeline Implementation & Validation
+* **Stage:** Task 4 (Video Egg Tracking).
+* **AI Disclosure:** AI authored `egg_segmenter.py` (verbatim extraction of the frozen segmenter from `Task_3.ipynb` with `cv2.setRNGSeed(0)` and modular functions) and `task4_track.py` (constant-velocity 2D Kalman filter, Hungarian distance matching, table ROI cropping, morphological opening fallback for cutting text/arrow attachments, 32-bin grayscale histogram camera-cut detection, and diagnostic plotting).
+* **Manual Verification Required by Human Developer:** Visually inspect `preview_before.png` vs `preview_after.png` and review the output video `tracked_eggs.mp4` to check by eye the suspect ID switch (ID 2 lost -> ID 10 born at ~30–33s) and verify that brief finger occlusions do not corrupt track continuity.
