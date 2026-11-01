@@ -158,7 +158,7 @@ cython_debug/
 
 #data
 data
-docs\TASK4_EXPLAINED.md
+docs/TASK4_EXPLAINED.md
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
